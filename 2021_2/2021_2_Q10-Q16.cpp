@@ -65,8 +65,11 @@ int main(int argc, char** args) {
 }
 
 // Q15 - move is used instead of simply assigning in S3 because
+// a. it is illegal to assign a unique pointer because only one unique pointer and point to an object at a time
+// b. move allows only one unique_ptr to point to an object at the same time
+// d. both a and b
 /*
-    d
+    D
     It is illegal to assign a unique pointer because only one unique pointer can point to an object at a time
     Move allows only one unique_ptr to point to an object at the same time
 */

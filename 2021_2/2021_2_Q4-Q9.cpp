@@ -98,8 +98,7 @@ int main(int argc, char** args) {
 
 // Q9 - When printing an Obj in statement S1 in Obj.cpp, what operator << is called on o.data?
 // a. the operator << defined for int by C++
-// c. the operator << defined for Obj in Obj.cpp
 /*
-    a
+    A
     The statement S1 is inside the ostream operator, so the operator is still the default one defined in C++, not the overloaded one
 */

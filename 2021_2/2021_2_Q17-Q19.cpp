@@ -75,15 +75,15 @@ int main(int argc, char** args) {
 
 // Q17 - is there a race on o1.ii or o2.ii in the increments performed by threads t1 and t2?
 /*
-    no
+    No
 */
 
 // Q18 - is there a race on Obj.si in the increments performed by threads t3 and t4?
 /*
-    yes
+    Yes
 */
 
 // Q19 - is there a race on Obj.si in the increments performed by threads t5 and t6?
 /*
-    no
+    No
 */
