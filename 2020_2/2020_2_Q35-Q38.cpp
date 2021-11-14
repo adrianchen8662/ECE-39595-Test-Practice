@@ -46,14 +46,17 @@ int main(int argc, char** args) {
 /*
     No
 */
+
 // Q36 - Does S2 give an error at compile time?
 /*
     Yes
 */
+
 // Q37 - Does S3 give an error at compile time?
 /*
     No
 */
+
 // Q38 - Does S3 give an error at run time?
 /*
     Yes
