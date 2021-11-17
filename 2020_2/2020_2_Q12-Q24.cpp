@@ -121,7 +121,7 @@ int main(int argc, char** args) {
     D1 d1;
     Base& d1R = d1;
     
-    bR = d1R;
+    bR = d1R; // assigns the base part of the derived object to the object b that is bound to bR - shallow copy
     bR.f3( ); // Q 16 - B::f3
     /*
 

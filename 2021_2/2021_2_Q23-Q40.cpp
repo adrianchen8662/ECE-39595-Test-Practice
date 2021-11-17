@@ -144,32 +144,33 @@ int main(int argc, char** args) {
     /*
         D inherits from B2, so when declaring a B2 type D, it works
         Prints from the constructor at B::~B2, then prints from the constructor at D::D
+        Because it first constructs as B2, then D, B2's functions are added first then D's to overload
     */
     D* dP = (D*) b2P;
     
     b2P->f1( ); // Q25 - Err
     /*
-
+        f1 is declared as private only to b2P, and since b2P was declared as a D, it doesn't have access
     */
     b2P->f2(b2P); // Q26 - D::f2 D::f1
     /*
-
+        f2 would first execute D's function, then pass to f1. This is ok because 
     */
     b2P->f3( ); // Q27 - D::f3
     /*
-
+        f3 is D's own function, and overrides b2P's f3 function
     */
     b2P->f4( ); // Q28 - B2::f4
     /*
-
+        f4 in B2 was declared as a void, not a virtual void, overriding D's own f4
     */
-    b2P->f5( ); // Q29 - Err
+    b2P->f5( ); // Q29 - Err    
     /*
-
+        B2 was constructed first, then D. D's f5 was a virtual function, so it doesn't construct and doesn't exist
     */
     std::cout << b2P->v << std::endl; // Q30 - 5
     /*
-
+        in the constructor for D, B2 was passed in the initializer list as B2(5), assigning 5 to v
     */
     dP->f3( ); // Q31 - D::f3
     /*

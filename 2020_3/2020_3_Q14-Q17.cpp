@@ -75,20 +75,29 @@ int main(int argc, char *argv[]) {
     std::cout << "run4: " << globalCount << std::endl; // S4
 }
 
+// Q14 - When S1 executes, the value of globalCount printed is:
+// 2. equal to 2000
+/*
+    2
+    mutex m2 is in global scope, so it protects global count. There is synchronization
+*/
 // Q15 - When S2 executes, the value of globalCount printed is:
 // 3. less than or equal to 2000
 /*
     3
+    mutex m1 is in local scope which does not protect globalCount. 
 */
 
 // Q16 - When S3 executes, the value of globalCount printed is:
 // 3. less than or equal to 2000
 /*
     3
+    No synchronization
 */
 
 // Q17 - When S4 executes, the value of globalCount printed is:
 // 2. equal to 2000 
 /*
     2
+    Join after each thread to wait
 */
