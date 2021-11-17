@@ -43,7 +43,7 @@ int Base::count = 0;
 class D1 : public Base {
 public:
     static int count;
-    voir f2( );
+    void f2( );
     virtual void f3( );
     virtual void f5( );
 private:
@@ -93,11 +93,11 @@ void D2::f3( ) {
 void D2::f5( ) {
     std::cout << v2 << std::endl; // Q12 - Err
     /*
-
+        private
     */
     std::cout << sv << std::endl; // Q13 - Ok
     /*
-
+        public
     */
 }
 
@@ -124,37 +124,39 @@ int main(int argc, char** args) {
     bR = d1R; // assigns the base part of the derived object to the object b that is bound to bR - shallow copy
     bR.f3( ); // Q 16 - B::f3
     /*
-
+        Base has an f3, D1 doesn't override because D1 is virtual
     */
     bR.f5( ); // Q 17 - Err
     /*
-
+        Base doesn't have an f5, D1 doesn't override because D1 is virtual
     */
+    
     d1R.f1( ); // Q18 - B::f1
     /*
-
+        Base has an f1, D1 doesn't override because D1 doesn't have f1
     */
     d1R.f2( ); // Q19 - B::f2
     /*
-
+        Base has an f2, D1 doesn't override because base is not virtual
     */
     d1R.f3( ); // Q20 - D1::f3
     /*
-
+        Base has an f3 but both are virtual. Override successful
     */
     d1R.f4( ); // Q21 - Err
     /*
-
+        private
     */
+    
     D2 d2;
     D2& d2R = d2;
     d2.f1( ); // Q22 - Err
     /*
-
+        Base was declared as private, D2 doesn't see f1
     */
     d2.f3( ); // Q23 - D2::f3
     /*
-
+        D2 has its own f3, and Base was declared as private
     */
 }
 

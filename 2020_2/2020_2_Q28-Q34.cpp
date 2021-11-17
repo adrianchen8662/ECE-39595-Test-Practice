@@ -75,6 +75,6 @@ int main(int argc, char** args) {
 
     std::cout << b.count << std::endl; // 34 - 3
     /*
-
+        b constructor called 3 times: line 50, line 62, line 74
     */
 }

@@ -69,12 +69,12 @@ int main(int argc, char** argv) {
     Stringy s1(a);
     std::cout << s1 << std::endl; // Q1 - aa
     /*
-
+        constructor adds an a
     */
     a = b = c;
     std::cout << a << std::endl // Q2 - return
     /*
-
+        equals operator overrides
     */
     std::cout << b << std::endl; // Q3 - c
     /*
@@ -84,25 +84,25 @@ int main(int argc, char** argv) {
     Stringy e("eee");
     std::cout << d+e << std::endl; // Q4 - dddeee
     /*
-
+        operator overloading
     */
     std::cout << e-1 << std::endl; // Q5 - eee
     /*
-
+        not defined operator overload, minus 1 does nothing
     */
     Stringy f("f");
     std::cout << f*3 << std::endl; // Q6 - fff
     /*
-
+        operator overloading
     */
     Stringy s2 = d += e;
     std::cout << s2 << std::endl; // Q7 - dddeeea
     /*
-
+        s2 = adds an a, d+= e adds ddd and eee to make dddeeea
     */
     std::cout << d << std::endl; // Q8 - dddeee
     /*
-
+        d += e is done first, reassigning d to dddeee. s2 = brings in the a
     */
 }
 

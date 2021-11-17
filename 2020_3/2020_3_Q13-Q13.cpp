@@ -42,14 +42,14 @@ int main(int argc, char** args) {
     Derived d(30);
     std::cout << b.val << std::endl; // Q11 - 0
     /*
-
+        Assigned at 39
     */
     std::cout << d1.val << std::endl; // Q12 - -10
     /*
-
+        d1 constructor negs value
     */
     std::cout << d.D2::val << std::endl; // Q13 - 30
     /*
-
+        Assigned at 42
     */
 }

@@ -41,14 +41,14 @@ int main(int argc, char** args) {
     Derived d(30);
     std::cout << b.val << std::endl; // Q8 - 0
     /*
-
+        Assigned at 38
     */
     std::cout << d1.val << std::endl; // Q9 - 10
     /*
-
+        Assigned at 39
     */
     std::cout << d.D2::val << std::endl; // Q10 - -30
     /*
-        
+        Assigned at 41
     */
 }

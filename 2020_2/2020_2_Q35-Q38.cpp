@@ -50,6 +50,7 @@ int main(int argc, char** args) {
 // Q36 - Does S2 give an error at compile time?
 /*
     Yes
+    Wrong inherit
 */
 
 // Q37 - Does S3 give an error at compile time?
@@ -57,7 +58,8 @@ int main(int argc, char** args) {
     No
 */
 
-// Q38 - Does S3 give an error at run time?
+// Q38 - Does S4 give an error at run time?
 /*
     Yes
+    The cast goes as b is cast into Y. B doesn't have a g() function. 
 */

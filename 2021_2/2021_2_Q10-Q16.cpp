@@ -47,7 +47,7 @@ int main(int argc, char** args) {
     
     std::cout << sp1.use_count( ) << std::endl; // Q13 - 2
     /*
-        
+        use_count counts how many pointers point to the same object. sp1 and sp2 both point to the same thing, so use_count is 2
     */
     // reset makes the shared pointer no longer point
     // to an object
@@ -60,7 +60,7 @@ int main(int argc, char** args) {
     std::unique_ptr<D1> up2 = std::move(up1); // S3
     std::cout << sp1.use_count( ) << std::endl; // Q14 - 0
     /*
-
+        sp1 not touched
     */
 }
 
