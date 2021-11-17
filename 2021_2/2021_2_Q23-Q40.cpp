@@ -138,7 +138,7 @@ void f1(D* d) {
 int main(int argc, char** args) {
     B1* b1P = new B1(2); // Q23 - Err
     /*
-        
+        B1 is an abstract class, there is an = in f3. So we cannot create an instance of that
     */
     B2* b2P = new D(2); // Q24 - B2 cD c
     /*

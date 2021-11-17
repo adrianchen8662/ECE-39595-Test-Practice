@@ -106,7 +106,7 @@ void var(D2 d2) {
     std::cout << "main" << std::endl;
     std::cout << d2.v1 << std::endl; // Q S14 - Ok
     /*
-
+        
     */
     std::cout << d2.v2 << std::endl; // Q S15 - Ok
     /*

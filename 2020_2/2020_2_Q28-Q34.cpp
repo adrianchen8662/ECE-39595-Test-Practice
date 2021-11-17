@@ -49,27 +49,27 @@ int main(int argc, char** args) {
 
     D1* d1 = new D1( ); // 28 - Ok
     /*
-
+        Not pvf
     */
     d1->h(2.0); // 29 - D1::hi
     /*
-
+        Goes to D1::h
     */
-    // d1->h( ); // 30 - Err
+    d1->h( ); // 30 - Err
     /*
-
+        D1 has no h that is empty
     */
     D2* d2 = new D2( ); // 31 - Ok
     /*
-
+        Not pvf
     */
     d2->h(1); // 32 - D2::hi
     /*
-
+        Has its own D2::h(int)
     */
     d2->h( ); // 33 - B::hv
     /*
-
+        has using "Base::h" so it uses that
     */
     Base b;
 

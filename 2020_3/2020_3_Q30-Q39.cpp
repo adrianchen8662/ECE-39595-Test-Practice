@@ -80,39 +80,39 @@ int main(int argc, char** args) {
 
     b->f4( ); // Q30 - B::f4, B::f5
     /*
-
+        b is a base class, so when f4 is called it goes to f4, then f5
     */
     bd->fstat( ); // Q31 - B::fs
     /*
-
+        bd inherits fstat from B because public and not virtual
     */
     bd->f1( ); // Q32 - D::f1
     /*
-
+        bd has its own f1
     */
     bd->f2( ); // Q33 - Err
     /*
-
+        B doesn't have a f2
     */
     bd->f3( ); // Q34 - B::f3
     /*
-
+        bd has its own f3, which is overriden because not virtual
     */
     f(Derived( )); // Q35 - D&&
     /*
-
+        It's a derived class, no problems
     */
     Derived d;
     f(d); // Q36 - D&&
     /*
-
+        Derived is also a derived class, no problems
     */
     int i = 4; // S1
     int* ip = &i;
     f(ip);
     std::cout << i << std::endl; // Q37 - 2
     /*
-
+        gets ip value
     */
     std::cout << ip << std::endl; // S2
 }
