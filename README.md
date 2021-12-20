@@ -15,7 +15,9 @@ ECE 39595C Spring 2021 Second Exam (/2021_2/)
 /*
     [explanation]
 */
+```
 ### Separate question:
+```
 // Q[number] - [question]
 // [related answer]
 /*
